@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hero travel</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-img {
+            height: 273px;
+            width: 48px; 
+            height: 100px;
+            object-fit: contain;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            font: bold;
+        }
+        .a{
+            margin: 0;
+            padding: 0;
+        }
+
+        .a>a {
+            color: #333030;
+            text-decoration: none;
+        }
+
+        .a>a:hover {
+            color: #FF5400;
+            /* font-weight: bold; */
+        }
+
+        .b {
+            background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/Group\ 13\ \(1\)\ \(1\).png);
+
+            width: 1170px;
+            height: 500px;
+            border-radius: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .b > h1{
+            font-size: 4.1em;
+            margin: 10px 0 5px 0;
+        }
+        .b > p{
+            text-align: center;
+            margin: 10px 0 50px 0;
+            font-size: .8em;
+            word-wrap: break-word;
+            width: 676px;
+        }
+        .c{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px 0;
+        }
+        .d{
+            line-height: 1.8rem;
+        }
+        .d > h1{
+            font-size: 2.5rem;
+            margin: 20px 0;
+        }
+        .d > p, ul{
+            margin: 20px 0;
+            color: #333030;
+            font-size: .8rem;
+        }
+
+        .d > button{
+            padding: 10px;
+            color: white;
+            background-color: #FF5400;
+            border-radius: 8px;
+            font-weight: bold;
+            width: 174px;
+            font-size: large;
+        }
+
+        .e{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 643px;
+            margin: 100px auto;
+        }
+        .e > p{
+            color: #1313185b;
+            word-wrap: break-word;
+        }
+        .f{
+            margin: 5px;
+            padding: 15px;
+            border: 1px solid #FF5400;
+            border-radius: 8px;
+            width: 474px;
+            height: 422px;
+        }
+        .f-form > input{ 
+            width: 393px;
+            height: 52px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        .f-form > input[value]{
+            color: rgba(19,19,24,.3);
+            font-size: 16px;
+        }
+        .f-form > button{
+            width: 393px;
+            height: 52px;
+            color: white;
+            background-color: #FF5400;
+            border-radius: 8px;
+        }
+        .g{
+            position: relative;
+        }
+        .h{
+            position: absolute;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #FF5400;
+            color: white;
+            width: 324px;
+            transform: translate(86%,-157%) rotate(-19.63deg);
+            
+        }
+        .input{
+            width: 800px;
+            height: 84px;
+            background-color: rgba(255, 255, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .input > input:active{
+            border: none;
+        }
+        .input > input{
+            border: none;
+            height: 50px;
+            width: 174px;
+            border-radius: 10%;
+            margin: 5px;
+        }
+        .input > input[value]{
+            color: #1313185b;
+            font-size: large;
+        }
+        .input > button{
+            /* height: 50px; */
+            /* width: 174px; */
+            display: flex;
+            flex-flow: column;
+            border-radius: 10%;
+            margin: 5px;
+            color: white;
+            background-color:  #FF5400;            
+        }
+        svg{
+            width: 30px;
+        }
+        .col{
+            display: flex;
+            /* grid-template-rows: repeat(2,1fr); */
+            align-items: center;
+        }
+        .col1{
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .img{
+            position: relative;
+
+        }
+        .img > h1{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .meaw{
+            width: 573px;
+            background-color: #fbb4633f;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .meaw > h1{
+            margin: 10px;
+            font-size: 24px;
+        }
+        .meaw > p{
+            margin: 10px;
+            color: #5a5a5d;
+        }
+        .meaw > img{
+            margin: 30px 10px;
+        }
+        .meawmeaw{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .col1 > img{
+            width: 24px;
+            height: 24px;
+            margin: 0;
+            padding: 0;
+        }
+        .col1 > p{
+            font-size: 16px;
+            color: #5a5a5d;
+        }
+        .tour{
+            margin: 20px;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            transform: translate(80%,50%);
+            border-radius: 10px;
+            width: 579px;
+            z-index: 100;
+            /* height: 389px; */
+        }
+        .sekend{
+            transform: translate(10%,50%);
+        }
+        .tour > p{
+            color: #5a5a5d;
+            word-wrap: break-word;
+            line-height: 26px;
+        }
+        .tour > h1{
+            line-height: 60px;
+            font-size: 24px;
+        }
+        .price{
+            font-size: 20px;
+            line-height: 35px;
+            color: #FF5400;
+        }
+        .tour > button{
+            width: 150px;
+            height: 52px;
+            background-color: #FF5400;
+            border-radius: 8px;
+            color: white;
+            font-size: large;
+        }
+        .nazi{
+            position: relative;
+            width: 1170px;
+            height: 500px;
+            margin: 20px;
+        }
+        .nazi > img{
+            position: absolute;
+            z-index: -5;
+        }
+        .erika > center >button{
+            width: 210px;
+            height: 52px;
+            background-color: #FF5400;
+            border-radius: 10px;
+            align-items: center;
+            margin: 10px auto;
+            color: white;
+            font-size: large;
+        }
+        .footer{
+            height: 502px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 25px;
+            background-color: rgba(19,19,24,.05);
+        }
+        @media only screen and (max-width: 812px) {
+            .c , .col , .col1 , form{
+                display: flex;
+                flex-direction: column;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+           .a{
+            display: none;
+           }
+            .tour{
+                width: auto;
+                height: auto;
+                transform: translate(17%,13%);
+            }
+            .meaw , .e , .b  , .f , .input{ 
+                width: auto;
+                height: auto;
+            }
+            .aaah{
+                display: flex;
+                flex-direction: row;
+            }
+            .b > h1{
+                font-size: large;
+            }
+            .img > img , .nazi{
+                width: 90vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span class="logo">
+                <img class="nav-img" src="Images/Group 40071 (2).png" alt="">
+<span style="margin: 0; padding: 0;"> <h1 style="margin: 0; padding: 0;">hero <span style="color: #FF5400;margin: 0; padding: 0;">travel</span></h1></span>
+            </span>
+            <div class="a">
+                <a href="">home</a>
+                <a href="">packages</a>
+                <a href="">testimonial</a>
+                <a href="">blogs</a>
+                <a href="">contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="b">
+            <h1>explore your travel</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti nesciunt minima molestiae porro
+                dolorem dicta enim voluptates voluptatibus quisquam!</p>
+
+            <form class="input">
+                <input type="text" value="where to"><input type="text" value="when"><input type="text" value="select type">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                    <span>find now</span>
+                </button>
+            </form>
+        </div>
+        <div class="c">
+            <div class="d">
+                <h1>Our Popular Tours</h1>
+                <p>Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
+                <ul>
+                    <li>Tempus euismod lacus mauris dignissim quis in ultrices. Magna nullam odio neque diam. Sociis erat at .</li>
+                    <li>Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam.</li>
+                    <li>Accumsa neget et turpis praesent lorem egestas enim elit bibendum. Risus at in.</li>
+                </ul>
+                <p>Amet consectetur. Vulputate commodo felis molestie risus 
+                    ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet. Id bibendum nunc senectus semper tincidunt. </p>
+                <button>read more</button>    
+            </div>
+            <img src="Images/Rectangle 4.png" alt="">
+        </div>
+        <div class="e">
+            <h1>Choose Your Destination</h1>
+            <p>Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
+
+        </div>
+        <div class="flex">
+            <div class="col">
+                <div class="img">
+                    <img src="Images/Rectangle 5.png" alt="">
+                    <h1>maldives</h1>
+                </div>
+                <div class="img">
+                    <img src="Images/Rectangle 8.png" alt="">
+                    <h1>indonatia</h1>
+                </div>
+            </div>
+            <div class="col">
+                <div class="img">
+                    <img src="Images/Rectangle 6.png" alt="">
+                    <h1>sri lanka</h1>
+                </div>
+                <div class="img">
+                    <img src="Images/Rectangle 7.png" alt="">
+                    <h1>north america</h1>
+                </div>
+                <div class="img">
+                    <img src="Images/Rectangle 9.png" alt="">
+                    <h1>kashmir</h1>
+                </div>
+            </div>
+            <div class="col">
+                <div class="img">
+                    <img src="Images/Rectangle 11.png" alt="">
+                    <h1>bangladesh</h1>
+                </div>
+                <div class="img">
+                    <img src="Images/Rectangle 10.png" alt="">
+                    <h1>bandarban</h1>
+                </div>
+            </div>
+        </div>
+        <div class="e">
+            <h1>Why Chose Us</h1>
+            <p>Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
+        </div>
+        <div class="meawmeaw">
+            <div class="col">
+                <div class="f meaw">
+                    <img src="Images/hotel 1.png" alt="">
+                    <h1>Handpicked Hotels</h1>
+                    <p>Amet consectetur. Vulputate commodo felis molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet. </p>
+                </div>
+                <div class="f meaw">
+                    <img src="Images/Group 27.png" alt="">
+                    <h1>World Class Service</h1>
+                    <p>Amet consectetur. Vulputate commodo felis molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet. </p>
+                </div>
+            </div>
+            <div class="f meaw">
+                <img src="Images/Group 26.png" alt="">
+                <h1>Best Price Guarantee</h1>
+                <p>Amet consectetur. Vulputate commodo felis molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet. </p>
+            </div>
+        </div>
+        <div class="e">
+            <h1>Deals & Discounts</h1>
+            <p>Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p> 
+        </div>
+        <div class="erika">
+            <div class="nazi">
+                <img src="Images/Group 39.png" alt="">
+                <div class="tour">
+                    <div class="col aaah">
+                        <div class="col1">
+                            <img src="Images/Frame.png" alt="">
+                            <p>7 days/6 night</p>
+                        </div>
+                        <div class="col1">
+                            <img src="Images/Frame.png" alt="">
+                            <p>7 days/6 night</p>
+                        </div>
+                        <div class="col1">
+                            <img src="Images/Frame.png" alt="">
+                            <p>7 days/6 night</p>
+                        </div>
+                    </div>
+                    <h1>Tour To Satorini</h1>
+                    <p>Amet consectetur. Vulputate commodo felis 
+                        molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing.</p>
+                    <h3 class="price">Price: $1300-$1500</h3>    
+                    <button>Book now</button>
+                </div>
+            </div>
+            
+            <div class="nazi">
+                <img src="Images/Group 40.png" alt="aaa">
+                <div class="tour sekend">
+                    <div class="col aaah">
+                        <div class="col1">
+                            <img src="Images/Frame.png" alt="">
+                            <p>7 days/6 night</p>
+                        </div>
+                        <div class="col1">
+                            <img src="Images/Frame.png" alt="">
+                            <p>7 days/6 night</p>
+                        </div>
+                        <div class="col1">
+                            <img src="Images/Frame.png" alt="">
+                            <p>7 days/6 night</p>
+                        </div>
+                    </div>
+                    <h1>Tour To Satorini</h1>
+                    <p>Amet consectetur. Vulputate commodo felis 
+                        molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing.</p>
+                    <h3 class="price">Price: $1300-$1500</h3>    
+                    <button>Book now</button>
+                </div>
+    
+            </div>
+
+            <div class="nazi">
+                <img src="Images/Group 39.png" alt="">
+                <div class="tour">
+                    <div class="col aaah">
+                        <div class="col1">
+                            <img src="Images/Frame.png" alt="">
+                            <p>7 days/6 night</p>
+                        </div>
+                        <div class="col1">
+                            <img src="Images/Frame.png" alt="">
+                            <p>7 days/6 night</p>
+                        </div>
+                        <div class="col1">
+                            <img src="Images/Frame.png" alt="">
+                            <p>7 days/6 night</p>
+                        </div>
+                    </div>
+                    <h1>Tour To Satorini</h1>
+                    <p>Amet consectetur. Vulputate commodo felis 
+                        molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing.</p>
+                    <h3 class="price">Price: $1300-$1500</h3>    
+                    <button>Book now</button>
+                </div>
+            </div>
+            <center>
+                <button>See all packages</button>
+
+            </center>
+        </div>
+        <div class="c">
+            <div class="d">
+                <h1 style="line-height: 3rem;">A Simple Perfect Place To Get Lost</h1>
+                <p>Amet consectetur. Vulputate commodo felis molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. </p>
+                <ul style="font-weight: bold; color: black;">
+                    <li>Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam.</li>
+                    <li>Accumsa neget et turpis praesent lorem egestas enim elit bibendum. Risus at in.</li>
+                </ul>
+                <button>read more</button>    
+            </div>
+            <img src="Images/Group 40089.png" alt="">
+        </div>
+        <div class="col" style="margin: 50px 0;">
+            <div class="f">
+                <h1 style="font-size: 24px; margin: 20px 0;">Newsletter</h1>
+                <p style="color: rgba(90,90,93,1); margin: 20px 0;">Get your daily dose of travel news & tips. Sign up today!</p>
+                <hr style="color: rgba(19,19,24,.1); margin: 20px 0; width: 393px;">
+                <form action="" class="f-form">
+                    <input type="text" value="enter your name">
+                    <input type="email" value="enter your email">
+                    <button>Subscribe</button>
+                </form>
+            </div>
+            <div class="g">
+                <img src="Images/Rectangle 8 (1).png" alt="">
+                <div class="h">
+                    <p>travel.com</p>
+                    <h1>Sa ve upto 70%</h1>
+                </div>
+            </div>
+        </div>       
+    </main>
+    <footer>
+        <div class="footer">
+            <span class="logo">
+                <img class="nav-img" src="Images/Group 40071 (2).png" alt="">
+<span style="margin: 0; padding: 0;"> <h1 style="margin: 0; padding: 0;">hero <span style="color: #FF5400;margin: 0; padding: 0;">travel</span></h1></span>
+            </span>
+            <p style="color: rgba(90,90,93,1); line-height: 26px; word-wrap: break-word; margin: 15px 0;"></p>
+            <div style="margin: 15px 0;" class="col">
+                <img src="Images/1.png" alt="">
+                <img src="Images/2.png" alt="">
+                <img src="Images/3.png" alt="">
+                <img src="Images/4.png" alt="">
+            </div>
+            <hr style="width: 80vw; color: rgba(19,19,24,.1);">
+            <p style="color: rgba(90,90,93,1); margin: 15px 0;">2017, All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
